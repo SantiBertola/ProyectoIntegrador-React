@@ -1,5 +1,5 @@
 import React from 'react'
-import { ProductosCard, CardTittles, PriceContainer, ButtonContainer } from './CardsProductsStyled'
+import { ProductosCard, CardTittles, PriceContainer, ShowMoreButton } from './CardsProductsStyled'
 
 
 const CardProduct = ({ id, name, product, price, category, cardImg }) => {
@@ -11,7 +11,7 @@ const CardProduct = ({ id, name, product, price, category, cardImg }) => {
                 <p>{product}</p>
             </CardTittles>
             <PriceContainer>
-                <ButtonContainer>{price}</ButtonContainer>
+                <ShowMoreButton>{price}</ShowMoreButton>
             </PriceContainer>
 
         </ProductosCard>

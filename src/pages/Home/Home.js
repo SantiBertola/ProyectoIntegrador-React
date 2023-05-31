@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Hero from '../../components/Hero/Hero'
 import Categorias from '../../components/Categorias/Categorias'
 import { HomeWrapper, CategoriasWrapper, ProductosWrapper, NovTittle, NewsletterWrapper, NewsletterTittles } from './HomeStyled'
@@ -6,12 +6,21 @@ import CardsProducts from '../../components/Productos/CardsProducts'
 import Newsletter from '../../components/Newsletter/Newsletter'
 
 const Home = () => {
+  const productsRef = useRef()
+
+  const doScroll = () => {
+    window.scrollTo(
+      productsRef.current.getBoundingClientRect().x,
+      productsRef.current.getBoundingClientRect().y,
+    )
+  }
+
   return (
     <>
       <HomeWrapper>
         {/* Hero Section */}
 
-        <Hero />
+        <Hero doScroll={doScroll} />
 
 
         {/* Categorias Section */}
@@ -21,7 +30,7 @@ const Home = () => {
         </CategoriasWrapper>
 
         {/* Productos Section*/}
-        <ProductosWrapper>
+        <ProductosWrapper ref={productsRef}>
           <NovTittle>
             <h2>😎Nuestro stock😎</h2>
             <p>¡Todo lo nuevo para la temporada 2022-23!</p>

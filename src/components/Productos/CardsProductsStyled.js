@@ -31,7 +31,7 @@ export const CardTittles = styled.div`
     flex-direction: column;
     p {
     color: #cc564f;
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding-top: 5px;
     text-align: center;
   }
@@ -45,6 +45,7 @@ export const PriceContainer = styled.div`
     justify-content: center;
     font-size: 1.5rem;
     background: #2b3438ad;
+    color: rgba(0, 0, 0, 0.795);
     padding: 5px;
 `
 
@@ -58,20 +59,6 @@ export const ButtonContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #e4584f;
-    border: 2px solid black;
-    border-radius: 7px;
-    padding: 10px;
-    margin-top: 5px;
-    cursor: pointer;
-    font-size: 16px;
-
-    :hover {
-      border: 2px solid #e4584f;
-      color: #e4584f;
-      background-color: #2b3438;
-      transition: 0.3s all ease-in;
-    }
 `
 
 export const ShowMoreButton = styled.button`

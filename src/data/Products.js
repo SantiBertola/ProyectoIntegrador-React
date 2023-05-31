@@ -1,3 +1,7 @@
+import CamisetaLeBron from "../assets/img/Novedades/Lebron355a5e1a-4441-4127-afd9-3a83af3a5502.webp-removebg-preview.png"
+
+
+
 export const products = [
     {
         id: 1,
@@ -5,7 +9,7 @@ export const products = [
         product: "Camiseta NBA Dri-fit LeBron James",
         price: "15.900",
         category: "Novedades",
-        cardImg: "/assets/img/Novedades/Lebron355a5e1a-4441-4127-afd9-3a83af3a5502.webp-removebg-preview.png",
+        cardImg: [CamisetaLeBron],
     },
     {
         id: 2,

@@ -1,11 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { HeroContainerStyled, HeroInfo, HeroLinks, HeroSearchBarStyled, IconWrapperStyled } from './HeroStyled'
 import HeroImg from "../../assets/img/Hero-Jordan.png"
 import Button from '../UI/Button/Button'
-import { AiOutlineSearch } from 'react-icons/ai';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectCategory } from '../../redux/categories/CategoriesSlice';
 
 
-const Hero = () => {
+const Hero = ({ doScroll }) => {
+
+  const [value, setValue] = useState('');
+  const listOfCategories = useSelector(
+    state => state.categories.categories
+  ).map(category => category.category);
+    
+  const dispatch = useDispatch();
+  
+  const handleSubmit = (e, value) => {
+    e.preventDefault()
+
+    const newCategory = value.trim().toLowerCase().replace(' ', '') //.split(" ").join('')
+
+    const selectedCategory = listOfCategories.find(
+      category => category.toLowerCase() === newCategory
+    )
+    if (selectedCategory) {
+      dispatch(selectCategory(selectedCategory))
+      doScroll()
+    } else {
+      return alert('Categoria no encontrada')
+    }
+  }
+
 
 
 
@@ -17,10 +42,12 @@ const Hero = () => {
         <h4>Tu tienda favorita de NBA en Argentina</h4>
         <HeroLinks>
           <HeroSearchBarStyled
+            value={value}
+            onChange={e => setValue(e.target.value)}
             type='text'
             placeholder='Ejemplo: Ropa de hombres'
           />
-          <Button>Buscar</Button>
+          <Button onClick={e => handleSubmit(e, value)}>Buscar</Button>
         </HeroLinks>
 
       </HeroInfo>

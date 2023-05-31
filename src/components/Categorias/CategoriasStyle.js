@@ -6,6 +6,7 @@ export const CategoriesContainer = styled.div`
         align-items: center;
         justify-content: center;
         gap: 20px;
+        width: 100%;
 
         @media (max-width: 992px) {
             flex-direction: column;
@@ -14,11 +15,17 @@ export const CategoriesContainer = styled.div`
 `
 
 export const CategoriesButtons = styled.button`
-        background-color: #e4584f;
-        border: 2px solid black;
+        background-color: ${({ selected }) =>
+            selected ? 'black' : '#e4584f'};
+        color: ${({ selected }) =>
+            selected ? '#e4584f' : 'black'};
+
+        border: 2px solid ${({ selected }) =>
+            selected ? '#e4584f' : 'black'};
         border-radius: 10px;
         padding: 5px;
         cursor: pointer;
+        width: 150px;
 
     :hover {
         border: 2px solid #e4584f;
@@ -29,7 +36,7 @@ export const CategoriesButtons = styled.button`
 
     @media (max-width: 992px) {
         font-size: 0.9rem;
-        width: 25%;
+        width: 30%;
     }
 
 `
