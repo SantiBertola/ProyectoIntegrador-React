@@ -2,13 +2,13 @@ import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const StyledButton = styled(motion.button)`
-  padding: 10px;
+  padding: 0.8rem 1.5rem;
   outline: none;
   border: 2px solid black;
   border-radius: 10px;
   background: #e4584f;
   color: black;
-  font-weight: 400;
+  font-weight: 700;
   cursor: pointer;
   font-size: 16px;
 

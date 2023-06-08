@@ -6,17 +6,20 @@ export const ProductosContainer = styled.div`
   justify-content: center;
   grid-template-columns: repeat(auto-fit, 500px);
   row-gap: 3.5rem;
+  gap: 25px;
   width: 100%;
   padding: 1rem 0;
 `;
 
 export const ProductosCard = styled.div`
   background: #2b3438ad;
-  width: 400px;
+  width: 500px;
+  height: 600px;
   border-radius: 15px;
   padding: 1rem;
   img {
     width: 100%;
+    height: 400px;
     margin-bottom: 1rem;
   }
 `;

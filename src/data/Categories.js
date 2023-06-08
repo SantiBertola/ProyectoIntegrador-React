@@ -1,26 +1,21 @@
 export const Categories = [
     {
       id: 1,
-      title: '🏀Todos🏀',
-      category: 'Todo',
-    },
-    {
-      id: 2,
       title: '⚡️Novedades⚡️',
       category: 'Novedades',
     },
     {
-      id: 3,
+      id: 2,
       title: '🙋🏼‍♂️Hombres🙋🏼‍♂️',
       category: 'Hombres',
     },
     {
-      id: 4,
+      id: 3,
       title: '🙋🏼‍♀️Mujeres🙋🏼‍♀️',
       category: 'Mujeres',
     },
     {
-      id: 5,
+      id: 4,
       title: '👓Accesorios👓',
       category: 'Accesorios',
     }

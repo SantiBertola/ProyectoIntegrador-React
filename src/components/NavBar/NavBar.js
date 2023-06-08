@@ -1,14 +1,25 @@
 import React from 'react'
-import { NavbarContainerStyled, NavbarLinks, Imagen, CartStyled } from './NavBarStyled'
+import { NavbarContainerStyled, NavbarLinks, CartStyled, UserNavStyled, UserContainerStyled, } from './NavBarStyled'
 import Logo from '../../assets/img/Logo.png'
-import { Link } from 'react-router-dom'
-import Menu from '../../assets/img/Menu.png'
+import { Link, useNavigate } from 'react-router-dom'
 import CartIcon from './CartIcon/CartIcon'
+import ModalCart from './ModalCart/ModalCart'
+import ModalUser from './ModalUser/ModalUser'
+import MenuIcon from './MenuIcon/MenuIcon'
+import { useDispatch, useSelector } from 'react-redux'
+import { toggleHiddenMenu } from '../../redux/user/userSlice'
 
 
 const NavBar = () => {
+
+    const currentUser = useSelector(state => state.user.currentUser)
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+
     return (
         <NavbarContainerStyled>
+            <ModalCart />
+            <ModalUser />
             <div>
                 <Link to="/">
                     <img src={Logo} alt="Logo" />
@@ -16,7 +27,7 @@ const NavBar = () => {
             </div>
 
             <div>
-                <Imagen src={Menu} style={{width: '50%', height: '50%'}}/>
+                <MenuIcon />
             </div>
 
 
@@ -27,7 +38,15 @@ const NavBar = () => {
                 <CartStyled>
                     <CartIcon />
                 </CartStyled>
-                <Link to="/register">Registrate</Link>
+                <UserNavStyled>
+                    <UserContainerStyled onClick={() =>
+                        currentUser ? dispatch(toggleHiddenMenu()) : navigate('/register')
+                    }>
+                        <span>{
+                            currentUser ? `${currentUser.nombre}` : 'Registrate'
+                        }</span>
+                    </UserContainerStyled>
+                </UserNavStyled>
 
             </NavbarLinks>
         </NavbarContainerStyled>

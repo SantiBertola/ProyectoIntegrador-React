@@ -7,36 +7,39 @@ import { INITIAL_LIMIT } from '../../utils/constants';
 const CardsProducts = () => {
   const [limit, setLimit] = useState(INITIAL_LIMIT)
 
-  let products = useSelector(state => state.products.products)
-  const selectedCategory = useSelector(state => state.categories.selectedCategory)
+  let products = useSelector(state => state.products.products);
+  const selectedCategory = useSelector(
+    state => state.categories.selectedCategory
+  );
 
-  const totalProducts = useSelector(state => state.products.totalProducts)
+  const totalProducts = useSelector(state => state.products.totalProducts);
 
-  if(selectedCategory) {
+  if (selectedCategory) {
     products = {
-      [selectedCategory]: products[selectedCategory]
+      [selectedCategory]: products[selectedCategory],
     }
   }
 
   return (
     <>
       <ProductosContainer>
-      {Object.entries(products).map(([_category, clothes]) =>
-        clothes.map(product => {
-        if (limit >= product.id || selectedCategory) {
-          return <CardProduct key={product.id} {...product} />;
-        }
-        else
-          return null;
-      })
+        {Object.entries(products).map(([_category, clothes]) =>
+          clothes.map(product => {
+            if (limit >= product.id || selectedCategory) {
+              return <CardProduct key={product.id} {...product} />;
+            } else return null;
+          })
         )}
-
       </ProductosContainer>
 
-      <ButtonContainer>
-        <ShowMoreButton>Ver más</ShowMoreButton>
-      </ButtonContainer>
 
+      {
+        !selectedCategory && (
+          <ButtonContainer onClick={() => setLimit(prevLimit => prevLimit + INITIAL_LIMIT)}>
+            <ShowMoreButton>Ver más</ShowMoreButton>
+          </ButtonContainer>
+        )
+      }
 
     </>
   )

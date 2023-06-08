@@ -16,7 +16,7 @@ export const categoriesSlice = createSlice({
           return {
             ...state,
             selectedCategory: action.payload !== state.selectedCategory ? action.payload : null
-          }  
+          }
         }
     }
 })
