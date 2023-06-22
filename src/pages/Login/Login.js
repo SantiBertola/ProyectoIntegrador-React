@@ -8,8 +8,8 @@ import { loginInitialValues } from '../../formik/initialValues';
 import { loginValidationSchema } from '../../formik/validationSchema';
 import { loginUser } from '../../axios/axios.user';
 import { setCurrentUser } from '../../redux/user/userSlice';
-import LoginInput from '../../components/UI/LoginInput/LoginInput';
 import Submit from '../../components/UI/Submit/Submit';
+import Input from '../../components/UI/Input/Input';
 
 const Login = () => {
     const dispatch = useDispatch()
@@ -33,8 +33,8 @@ const Login = () => {
                 }}
             >
                 <Form>
-                    <LoginInput type='email' name='email' placeholder='Correo electronico' />
-                    <LoginInput type='password' name='password' placeholder='Contraseña' />
+                    <Input type='email' name='email' placeholder='Correo electronico' />
+                    <Input type='password' name='password' placeholder='Contraseña' />
 
                     <LoginEmailStyled to='/register'>
                         <p>¿No tienes una cuenta? Registrate aquí</p>

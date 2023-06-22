@@ -9,7 +9,8 @@ export const createUser = async (nombre, email, password) => {
             email,
             password
         })
-        console.log(data)
+        console.log('Datos del usuario:', data);
+        console.log('Token:', data.token);
         return data
     } catch (error) {
         console.log({ createUserError: error })

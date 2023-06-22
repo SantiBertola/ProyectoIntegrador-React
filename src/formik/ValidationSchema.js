@@ -20,3 +20,13 @@ export const loginValidationSchema = Yup.object({
     email: Yup.string().required('Campo obligatorio'),
     password: Yup.string().min(8, 'La contraseña es demasiado corta').required('Campo obligatorio')
 })
+
+
+export const newsletterValidationSchema = Yup.object({ 
+    name: Yup.string().required('Campo obligatorio'),
+    lastName: Yup.string().required('Campo obligatorio'),
+    email: Yup.string().required('Campo obligatorio'),
+    cellphone: Yup.number().required('Campo obligatorio'),
+    genero: Yup.string().required('Campo obligatorio'),
+    edad: Yup.string().required('Campo obligatorio'),
+})

@@ -14,8 +14,8 @@ import { registerValidationSchema } from '../../formik/validationSchema';
 import { createUser } from '../../axios/axios.user';
 import { setCurrentUser } from '../../redux/user/userSlice';
 import { useRedirect } from '../../hooks/useRedirect';
-import LoginInput from '../../components/UI/LoginInput/LoginInput';
 import Submit from '../../components/UI/Submit/Submit';
+import Input from '../../components/UI/Input/Input';
 
 
 
@@ -37,6 +37,9 @@ const Register = () => {
                 initialValues={registerInitialValues}
                 validationSchema={registerValidationSchema}
                 onSubmit={async (values, actions) => {
+                    console.log('Nombre:', values.nombre);
+                    console.log('Email:', values.email);
+                    console.log('Contraseña:', values.password);
                     const user = await createUser(values.nombre, values.email, values.password)
                     actions.resetForm()
                     if (user) {
@@ -49,9 +52,9 @@ const Register = () => {
                 }}
             >
                 <Form>
-                    <LoginInput type='text' name='nombre' placeholder='Nombre' required />
-                    <LoginInput type='email' name='email' placeholder='Email' required />
-                    <LoginInput type='password' name='password' placeholder='Contraseña' required />
+                    <Input type='text' name='nombre' placeholder='Nombre' required />
+                    <Input type='email' name='email' placeholder='Email' required />
+                    <Input type='password' name='password' placeholder='Contraseña' required />
 
                     <LoginEmailStyled to='/login'>
                         <p>¿Ya tenes cuenta? Inicia sesión</p>

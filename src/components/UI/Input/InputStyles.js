@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const InputBoxStyled = styled.div`
   display: flex;
-  margin: 1.5rem 1rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -20,12 +19,14 @@ export const InputStyled = styled.input`
   border: ${({ isError }) => (isError ? '1px solid #ff3816; ' : '2px solid black')};
   border-radius: 8px;
   height: 35px;
-  padding: 1rem 1rem;
+  padding: 5px;
   color: black;
-  width: 80%;
+  width: 100%;
 
   ::placeholder {
     opacity: 60%;
+    color: black;
+    font-weight: 600;
   }
   -webkit-text-fill-color: black;
 

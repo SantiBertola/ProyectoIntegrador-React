@@ -12,7 +12,7 @@ export const LoginContainerStyled = styled.div`
   background-color: #2b3438ad;
 
   & h1 {
-    @media (max-width: 576px) {
+    @media (max-width: 992px) {
       text-align: center; 
     }
   }
@@ -25,6 +25,7 @@ export const Form = styled.form`
   justify-content: center;
   padding: 0 2rem;
   gap: 20px;
+  width: 80%;
 `;
 
 export const LoginEmailStyled = styled(Link)`

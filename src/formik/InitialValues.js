@@ -18,3 +18,12 @@ export const loginInitialValues = {
     email: '',
     password: ''
 }
+
+export const newsletterInitialValues = {
+    nombre: '',
+    apellido: '',
+    email: '',
+    cellphone: '',
+    genero: '',
+    edad: ''
+}
