@@ -9,6 +9,7 @@ export const ProductosContainer = styled.div`
   gap: 25px;
   width: 100%;
   padding: 1rem 0;
+  margin-top: 7.5rem;
 `;
 
 export const ProductosCard = styled.div`
@@ -22,6 +23,13 @@ export const ProductosCard = styled.div`
     height: 400px;
     margin-bottom: 1rem;
   }
+
+
+  @media (max-width: 576px) {
+    width: 70%;
+    height: 100%;
+  }
+
 `;
 
 
@@ -38,6 +46,10 @@ export const CardTittles = styled.div`
     padding-top: 5px;
     text-align: center;
   }
+
+    @media (max-width: 576px) {
+      text-align: center;
+    }
 
 
 `

@@ -1,8 +1,10 @@
 import { useNavigate } from 'react-router-dom';
+import GIF from '../../assets/img/giphy1.gif'
 
 import Button from '../../components/UI/Button/Button';
 
 import {
+  CongratulationsStyled,
   ContainerInfoStyled,
   PatternStyled,
   TextStyled,
@@ -12,15 +14,16 @@ import {
 const Felicitaciones = () => {
   const navigate = useNavigate();
   return (
-    <div>
+    <CongratulationsStyled>
       <TextStyled>
         <ContainerInfoStyled>
           <TitleStyled>¡Gracias por tu compra!</TitleStyled>
           <p>Te enviaremos a tu mail cuando este en camino</p>
+          <img src={GIF} />
         </ContainerInfoStyled>
         <Button onClick={() => navigate('/mis-ordenes')}>Volver</Button>
       </TextStyled>
-    </div>
+    </CongratulationsStyled>
   );
 };
 

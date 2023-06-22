@@ -4,12 +4,12 @@ import { StyledButton } from './ButtonStyled';
 const Button = ({
   children,
   disabled = false,
-  onClick = e => e.preventDefault(),
+  // onClick = e => e.preventDefault(),
 }) => {
   return (
     <StyledButton
       disabled={disabled}
-      onClick={onClick}
+      // onClick={onClick}
       whileTap={{ scale: 0.95 }}
     >
       {children}

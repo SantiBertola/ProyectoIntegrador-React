@@ -9,6 +9,12 @@ export const Formulario = styled.form`
     background-color: #2b3438ad;
     width: 40%;
     height: 40%;
+
+    @media (max-width: 992px) {
+        width: 100%;
+        text-align: center;
+    }
+
 `
 
 export const InputContainers = styled.div`

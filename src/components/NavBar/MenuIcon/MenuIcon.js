@@ -1,16 +1,21 @@
 import React from 'react'
-import { FaBars } from 'react-icons/fa';
 import { useDispatch } from 'react-redux'
-import { MenuContainer } from './MenuIconStyles';
+import { Burguer } from './MenuIconStyles';
 
-const MenuIcon = () => {
+const MenuIcon = ({handleClick, clicked}) => {
 
     const dispatch = useDispatch();
 
   return (
-    <MenuContainer>
-        <FaBars style={{width:'50px', height: '50px', display: 'none'}}/>
-    </MenuContainer>
+    <Burguer>
+      <div  onClick={handleClick} 
+            className={`icon nav-icon-5 ${clicked ? 'open' : ''}`}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </Burguer>
   )
 }
 

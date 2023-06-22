@@ -25,7 +25,7 @@ export const CategoriesButtons = styled.button`
         border-radius: 10px;
         padding: 5px;
         cursor: pointer;
-        width: 200px;
+        width: 300px;
 
     :hover {
         border: 2px solid #e4584f;
@@ -35,8 +35,10 @@ export const CategoriesButtons = styled.button`
     }
 
     @media (max-width: 992px) {
-        font-size: 0.9rem;
         width: 50%;
+    }
+    @media (max-width: 576px) {
+        width: 60%;
     }
 
 `

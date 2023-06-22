@@ -8,8 +8,8 @@ import { useNavigate } from 'react-router-dom';
 import { clearCart } from '../../../redux/cart/cartSlice';
 import { Button } from '../../NavBar/ModalCart/ModalCartStyles';
 import Input from '../../UI/Input/Input';
-import { checkoutInitialValues } from '../../../formik/InitialValues';
-import { checkoutValidationSchema } from '../../../formik/ValidationSchema';
+import { checkoutInitialValues } from '../../../formik/initialValues';
+import { checkoutValidationSchema } from '../../../formik/validationSchema';
 import { createOrder } from '../../../axios/axios.orders';
 
 const CheckoutForm = ({ cartItems, shippingCost, price }) => {

@@ -8,8 +8,14 @@ export const LoginContainerStyled = styled.div`
   align-items: center;
   justify-content: center;
   gap: 20px;
-  margin-top: 100px;
+  margin-top: 125px;
   background-color: #2b3438ad;
+
+  & h1 {
+    @media (max-width: 576px) {
+      text-align: center; 
+    }
+  }
 `;
 
 export const Form = styled.form`
@@ -31,19 +37,4 @@ export const LoginEmailStyled = styled(Link)`
     }
   }
 `;
-
-export const LoginInput = styled.input`
-    background-color: #2b3438;
-    color: #cc564f;
-    border: 1px solid #cc564f;
-    border-radius: 5px;
-    padding: 5px;
-    text-align: center;
-    width: 80%;
-    height: 35px;
-
-    ::placeholder {
-        color: #cc564f;
-    }
-`
 

@@ -7,6 +7,19 @@ export const FoundContainerStyled = styled.div`
   max-width: 1400px;
   height: 50vh;
   gap: 2rem;
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+    margin-top: 100px;
+
+    & h1 {
+      font-size: 2rem;
+    }
+
+    & h2 {
+      font-size: 1rem;
+    }
+  }
 `;
 
 export const FoundTextStyled = styled.div`

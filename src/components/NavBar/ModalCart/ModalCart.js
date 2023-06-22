@@ -102,10 +102,10 @@ const ModalCart = () => {
                 </PriceStyled>
               </TotalStyled>
               <ButtonContainerStyled>
-                <Button onClick={() => navigate('/checkout')}>
+                <Button onClick={() => navigate('/checkout')} disabled={ cartItems.length < 1}>
                   Comprar
                 </Button>
-                <Button onClick={e => e.preventDefault()}>
+                <Button onClick={() => dispatch(clearCart())} disabled={ cartItems.length < 1}>
                   Vaciar carrito
                 </Button>
 

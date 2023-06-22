@@ -1,5 +1,5 @@
-import React from 'react'
-import { NavbarContainerStyled, NavbarLinks, CartStyled, UserNavStyled, UserContainerStyled, } from './NavBarStyled'
+import React, { useState } from 'react'
+import { NavbarContainerStyled, NavbarLinks, BurgerMenu, CartStyled, UserNavStyled, UserContainerStyled, } from './NavBarStyled'
 import Logo from '../../assets/img/Logo.png'
 import { Link, useNavigate } from 'react-router-dom'
 import CartIcon from './CartIcon/CartIcon'
@@ -9,12 +9,17 @@ import MenuIcon from './MenuIcon/MenuIcon'
 import { useDispatch, useSelector } from 'react-redux'
 import { toggleHiddenMenu } from '../../redux/user/userSlice'
 
-
 const NavBar = () => {
 
     const currentUser = useSelector(state => state.user.currentUser)
     const dispatch = useDispatch()
     const navigate = useNavigate()
+    const [clicked, setClicked] = useState(false);
+    console.log(clicked)
+
+    const handleClick = () => {
+        setClicked(!clicked)
+    }
 
     return (
         <NavbarContainerStyled>
@@ -26,15 +31,10 @@ const NavBar = () => {
                 </Link>
             </div>
 
-            <div>
-                <MenuIcon />
-            </div>
-
-
-            <NavbarLinks>
-                <Link to="/">Inicio</Link>
-                <Link to="https://www.nba.com/schedule" target='_blank'>NBA</Link>
-                <Link to="/productos">Productos</Link>
+            <NavbarLinks className={` ${clicked ? 'active' : ''}`}>
+                <Link to="/" onClick={handleClick} >Inicio</Link>
+                <Link to="https://www.nba.com/schedule" target='_blank' >NBA</Link>
+                <Link to="/productos" onClick={handleClick} >Productos</Link>
                 <CartStyled>
                     <CartIcon />
                 </CartStyled>
@@ -49,6 +49,10 @@ const NavBar = () => {
                 </UserNavStyled>
 
             </NavbarLinks>
+
+            <BurgerMenu>
+                <MenuIcon clicked={clicked} handleClick={handleClick}/>
+            </BurgerMenu>
         </NavbarContainerStyled>
     )
 }

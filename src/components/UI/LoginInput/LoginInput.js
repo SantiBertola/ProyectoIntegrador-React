@@ -1,8 +1,7 @@
 import React from 'react';
 
-import { InputContainerStyled, LoginInputStyled } from './LoginInputStyles';
+import { InputContainerStyled, LoginInputStyled, ErrorMessageStyled } from './LoginInputStyles';
 import { ErrorMessage, Field } from 'formik';
-import { ErrorMessageStyled } from './LoginInputStyles';
 
 const LoginInput = ({ name, type, placeholder }) => {
   return (

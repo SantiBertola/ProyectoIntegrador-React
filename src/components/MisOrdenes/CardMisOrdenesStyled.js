@@ -8,6 +8,7 @@ export const MisOrdenesContainerStyled = styled.div`
   gap: 20px;
   max-width: 1500px;
   margin: 0 auto;
+  text-align: center;
 `;
 
 export const PedidoContainerStyled = styled.div`

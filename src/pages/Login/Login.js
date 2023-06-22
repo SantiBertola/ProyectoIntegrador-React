@@ -4,8 +4,8 @@ import { Form, LoginContainerStyled, LoginEmailStyled } from '../Login/LoginStyl
 import { useDispatch } from 'react-redux';
 import { useRedirect } from '../../hooks/useRedirect';
 import { Formik } from 'formik';
-import { loginInitialValues } from '../../formik/InitialValues';
-import { loginValidationSchema } from '../../formik/ValidationSchema';
+import { loginInitialValues } from '../../formik/initialValues';
+import { loginValidationSchema } from '../../formik/validationSchema';
 import { loginUser } from '../../axios/axios.user';
 import { setCurrentUser } from '../../redux/user/userSlice';
 import LoginInput from '../../components/UI/LoginInput/LoginInput';

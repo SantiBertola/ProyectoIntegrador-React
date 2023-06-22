@@ -2,11 +2,17 @@ import styled from 'styled-components';
 
 export const ProductosContainerStyled = styled.div`
   width: 40%;
+
+  @media (max-width: 992px) {
+    width: 80%;
+  }
 `;
 
 export const ProductsTitleStyled = styled.h2`
   font-weight: 500;
-  font-size: 22px;
+  font-size: 2rem;
+  color: #e45f67;
+  text-align: center;
 `;
 
 export const CardsWrapperStyled = styled.div`

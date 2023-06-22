@@ -8,7 +8,7 @@ export const LoginContainerStyled = styled.div`
   align-items: center;
   justify-content: center;
   gap: 20px;
-  margin-top: 100px;
+  margin-top: 125px;
   background-color: #2b3438ad;
 `;
 

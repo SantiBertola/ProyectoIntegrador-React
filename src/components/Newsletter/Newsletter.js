@@ -1,6 +1,7 @@
 import React from 'react'
 import { ButtonInput, FormInput, Formulario, InputContainers, SelectInput, TextAreaInput } from "./NewsletterStyles"
 
+
 const Newsletter = () => {
     return (
         <Formulario>

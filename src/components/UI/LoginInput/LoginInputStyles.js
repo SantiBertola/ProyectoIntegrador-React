@@ -11,7 +11,7 @@ export const LoginInputStyled = styled.input`
   background-color: #2b3438;
   border-radius: 5px;
   padding: 5px;
-  border: ${({ isError }) => (isError ? '1px solid #fb103d ' : '1px solid #cc564f;')};
+  border: ${({ isError }) => (isError ? '1px solid red ' : '1px solid #cc564f;')};
   outline: none;
   text-align: center;
 
@@ -32,7 +32,7 @@ export const LoginInputStyled = styled.input`
 export const ErrorMessageStyled = styled.p`
   margin: 0;
   margin-top: 5px;
-  color: #fb103d;
+  color: darkred;
   font-size: 14px;
   text-align: center;
 `;

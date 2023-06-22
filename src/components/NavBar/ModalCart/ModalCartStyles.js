@@ -20,6 +20,12 @@ export const ContainerStyled = styled(motion.div)`
   border: 1px solid #cc564f;
   border-radius: 0 0 0 1rem;
 
+  @media (max-width: 576px) {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+  }
+
 `;
 
 export const CloseButtonContainerStyled = styled.div`
@@ -103,6 +109,10 @@ export const ProductContainerStyled = styled.div`
     height: 80px;
     border-radius: 16px;
     object-fit: cover;
+  }
+
+  @media (max-width: 576px) {
+    width: 100%;
   }
 `;
 

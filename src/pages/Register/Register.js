@@ -9,8 +9,8 @@ import {
 import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { Formik } from 'formik';
-import { registerInitialValues } from '../../formik/InitialValues';
-import { registerValidationSchema } from '../../formik/ValidationSchema';
+import { registerInitialValues } from '../../formik/initialValues';
+import { registerValidationSchema } from '../../formik/validationSchema';
 import { createUser } from '../../axios/axios.user';
 import { setCurrentUser } from '../../redux/user/userSlice';
 import { useRedirect } from '../../hooks/useRedirect';
@@ -29,6 +29,7 @@ const Register = () => {
 
     useRedirect(state?.redirectedFromCheckout ? '/checkout' : '/')
 
+
     return (
         <LoginContainerStyled>
             <h1 style={{ color: '#e4584f', padding: '5px' }}>¿Primera vez por aquí? Registrate con tus datos</h1>
@@ -36,7 +37,7 @@ const Register = () => {
                 initialValues={registerInitialValues}
                 validationSchema={registerValidationSchema}
                 onSubmit={async (values, actions) => {
-                    const user = await createUser(values.name, values.email, values.password)
+                    const user = await createUser(values.nombre, values.email, values.password)
                     actions.resetForm()
                     if (user) {
                         dispatch(setCurrentUser({
@@ -47,14 +48,14 @@ const Register = () => {
                 }}
             >
                 <Form>
-                    <LoginInput type='text' name='name' placeholder='Nombre' />
-                    <LoginInput type='text' name='email' placeholder='Email' />
-                    <LoginInput type='password' name='password' placeholder='Contraseña' />
+                    <LoginInput type='text' name='nombre' placeholder='Nombre' required />
+                    <LoginInput type='email' name='email' placeholder='Email' required />
+                    <LoginInput type='password' name='password' placeholder='Contraseña' required />
 
                     <LoginEmailStyled to='/login'>
                         <p>¿Ya tenes cuenta? Inicia sesión</p>
                     </LoginEmailStyled>
-                    <Submit type='button'>
+                    <Submit type='submit'>
                         Registrarte
                     </Submit>
                 </Form>

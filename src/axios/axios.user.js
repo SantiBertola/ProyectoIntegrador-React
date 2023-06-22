@@ -1,5 +1,5 @@
 import { BASE_URL } from "../utils/constants"
-import axios from "axios"
+import axios from 'axios'
 
 
 export const createUser = async (nombre, email, password) => {
@@ -16,14 +16,13 @@ export const createUser = async (nombre, email, password) => {
     }
 }
 
-
 export const loginUser = async (email, password) => {
     try {
-        const { data } = await axios.post(`${BASE_URL}/auth/login`, {
+        const response = await axios.post(`${BASE_URL}/auth/login`, {
             email,
             password
         })
-        return data
+        return response.data
     } catch (error) {
         console.log({ loginUserError: error })
         return alert(error.response.data.errors[0].msg)

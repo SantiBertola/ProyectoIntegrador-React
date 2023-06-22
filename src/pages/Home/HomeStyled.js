@@ -18,7 +18,14 @@ export const CategoriasWrapper = styled.section`
 
   @media (max-width: 992px) {
         width: 100%;
-        font-size: 1.8rem;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    @media (max-width: 576px) {
+      & h2{
+         font-size: 1.6rem;
+      }
     }
 `;
 
@@ -35,12 +42,23 @@ export const NovTittle = styled.div`
     gap: 5px;
     font-size: 2rem;
     color: #e4584f;
-    padding: 40px 0px;
+    padding: 40px 0px 10px 0px;
     animation: fade 1s ease-in, slide-up 1.3s ease-in-out;
 
     @media (max-width: 992px) {
         width: 100%;
         font-size: 1.8rem;
+        text-align: center;
+        
+        & p {
+          font-size: 1.6rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+      & h2 {
+          font-size: 2rem;
+        }
     }
 `;
 

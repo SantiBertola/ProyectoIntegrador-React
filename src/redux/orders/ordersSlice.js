@@ -53,6 +53,13 @@ const ordersSlice = createSlice({
     }
 })
 
-export const { createOrderFail, fetchOrdersSuccess, fetchOrdersFail, fetchOrdersStart, clearError, clearOrders } = ordersSlice.actions
+export const {
+    createOrderFail,
+    fetchOrdersSuccess,
+    fetchOrdersFail,
+    fetchOrdersStart,
+    clearError,
+    clearOrders
+} = ordersSlice.actions
 
 export default ordersSlice.reducer

@@ -40,6 +40,19 @@ export const HeroInfo = styled.div`
 
     @media (max-width: 992px) {
         gap: 15px;
+
+        & h2 {
+        text-align: center;
+        font-size: 3rem;
+        color: #e4584f;
+
+    }
+
+        & h4 {
+        text-align: center;
+        font-size: 1.8rem;
+        color: #cc564f;
+    }
     }
 
 
@@ -53,6 +66,7 @@ export const HeroLinks = styled.div`
     
     @media (max-width: 992px) {
         padding-top: 15px;
+        flex-direction: column;
     }
 `
 
@@ -62,6 +76,7 @@ export const HeroSearchBarStyled = styled.input`
   border-radius: 5px;
   padding: 0.7rem 3rem;
   color: white;
+
 `;
 
 export const IconWrapperStyled = styled.div`

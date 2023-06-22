@@ -12,7 +12,7 @@ const Categoria = ({ title, category}) => {
       selected={category === selectedCategory}
       onClick={() => dispatch(selectCategory(category))}
     >
-        <h2>{title}</h2>
+        <h3>{title}</h3>
     </CategoriesButtons>
   )
 }

@@ -15,12 +15,11 @@ export const NavbarContainerStyled = styled.div`
     background-color: #404d54;
 `
 
-export const NavbarLinks = styled.ul`
+export const NavbarLinks = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 10px;
-    width: 30%;
+    width: 50%;
 
     & a {
         color: #cc564f;
@@ -32,7 +31,11 @@ export const NavbarLinks = styled.ul`
         text-decoration: underline;
     }
 
-    @media (max-width: 992px) {
+    .active {
+        display: flex;
+    }
+
+    @media (max-width: 992px) { 
         position: absolute;
         top: 120px;
         left: 5%;
@@ -48,6 +51,15 @@ export const NavbarLinks = styled.ul`
         z-index: 3;
         display: none;
     }
+
+`
+
+export const BurgerMenu = styled.div`
+  display: none;
+
+  @media (max-width: 992px) { 
+    display: flex;
+  }
 `
 
 export const CartStyled = styled.div`
@@ -80,7 +92,6 @@ export const UserNavStyled = styled.div`
   span {
     color: #cc564f;
     font-size: 20px;
-    margin-right: 20px;
   }
 
   & span:hover {

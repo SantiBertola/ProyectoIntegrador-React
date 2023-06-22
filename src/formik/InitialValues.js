@@ -1,7 +1,7 @@
 
 
 export const checkoutInitialValues = {
-    name: '',
+    nombre: '',
     cellphone: '',
     location: '',
     address: '',
@@ -9,7 +9,7 @@ export const checkoutInitialValues = {
 
 
 export const registerInitialValues = {
-    name: '',
+    nombre: '',
     email: '',
     password: ''
 }
