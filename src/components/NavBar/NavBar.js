@@ -15,7 +15,6 @@ const NavBar = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const [clicked, setClicked] = useState(false);
-    console.log(clicked)
 
     const handleClick = () => {
         setClicked(!clicked)
@@ -31,7 +30,7 @@ const NavBar = () => {
                 </Link>
             </div>
 
-            <NavbarLinks className={` ${clicked ? 'active' : ''}`}>
+            <NavbarLinks className={`links ${clicked ? 'active' : ''}`}>
                 <Link to="/" onClick={handleClick} >Inicio</Link>
                 <Link to="https://www.nba.com/schedule" target='_blank' >NBA</Link>
                 <Link to="/productos" onClick={handleClick} >Productos</Link>

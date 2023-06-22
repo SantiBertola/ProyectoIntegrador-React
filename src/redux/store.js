@@ -18,19 +18,20 @@ const reducers = combineReducers({
 })
 
 
-const persistConfig ={
+const persistConfig = {
     key: 'root',
     storage,
     whitelist: ['cart', 'user']
-};
-
-const persistedReducer = persistReducer(persistConfig, reducers)
-
-export const store = configureStore({
-    reducer: persistedReducer
-});
-
-export const persistor = persistStore(store);
+  };
+  
+  const persistedReducer = persistReducer(persistConfig, reducers);
+  
+  export const store = configureStore({
+    reducer: persistedReducer,
+    middleware: getDefaultMiddleware => getDefaultMiddleware({ serializableCheck: false })
+  });
+  
+  export const persistor = persistStore(store);
 
 
 

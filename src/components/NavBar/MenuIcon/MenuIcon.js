@@ -1,10 +1,7 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
 import { Burguer } from './MenuIconStyles';
 
 const MenuIcon = ({handleClick, clicked}) => {
-
-    const dispatch = useDispatch();
 
   return (
     <Burguer>

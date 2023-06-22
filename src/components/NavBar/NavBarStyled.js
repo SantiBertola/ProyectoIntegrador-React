@@ -13,6 +13,10 @@ export const NavbarContainerStyled = styled.div`
     position: fixed;
     z-index: 2;
     background-color: #404d54;
+
+    .active {
+      display: flex;
+    }
 `
 
 export const NavbarLinks = styled.div`
@@ -29,10 +33,6 @@ export const NavbarLinks = styled.div`
     & a:hover {
         color: #b55450;
         text-decoration: underline;
-    }
-
-    .active {
-        display: flex;
     }
 
     @media (max-width: 992px) { 

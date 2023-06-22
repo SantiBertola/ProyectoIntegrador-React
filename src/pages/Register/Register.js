@@ -45,6 +45,7 @@ const Register = () => {
                             token: user.token
                         }))
                     }
+                    console.log(user)
                 }}
             >
                 <Form>
