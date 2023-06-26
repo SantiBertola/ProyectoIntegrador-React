@@ -43,7 +43,6 @@ const Register = () => {
                     async (values, actions) => {
                     const user = await createUser(values.nombre, values.email, values.password)
                     actions.resetForm()
-                    //actions.preventDefault()
                     if (user) {
                         dispatch(setCurrentUser({
                             ...user.usuario,
