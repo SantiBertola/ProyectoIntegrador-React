@@ -9,7 +9,7 @@ export const ButtonSubmitStyled = styled(motion.button)`
         padding: 10px;
         cursor: pointer;
         font-size: 14px;
-        width: 45%;
+        width: 200px;
 
     :hover {
         border: 2px solid #e4584f;

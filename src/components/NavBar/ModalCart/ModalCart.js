@@ -41,6 +41,11 @@ const ModalCart = () => {
     0
   );
 
+  const handleClick = () => {
+    navigate('/checkout');
+    dispatch(toggleHiddenCart());
+  };
+
 
   return (
     <>
@@ -102,10 +107,10 @@ const ModalCart = () => {
                 </PriceStyled>
               </TotalStyled>
               <ButtonContainerStyled>
-                <Button onClick={() => navigate('/checkout')} disabled={ cartItems.length < 1}>
+                <Button onClick={handleClick} disabled={cartItems.length < 1}>
                   Comprar
                 </Button>
-                <Button onClick={() => dispatch(clearCart())} disabled={ cartItems.length < 1}>
+                <Button onClick={() => dispatch(clearCart())} disabled={cartItems.length < 1}>
                   Vaciar carrito
                 </Button>
 

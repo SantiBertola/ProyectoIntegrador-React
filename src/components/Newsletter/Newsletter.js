@@ -1,10 +1,10 @@
 import React from 'react'
-import { Formulario, SelectInput, TextAreaInput } from "./NewsletterStyles"
+import { Form, SelectInput, TextAreaInput } from "./NewsletterStyles"
 import { Formik } from 'formik'
 import { newsletterInitialValues } from '../../formik/initialValues'
 import { newsletterValidationSchema } from '../../formik/validationSchema'
 import Input from '../UI/Input/Input'
-import Button from '../UI/Button/Button'
+import Submit from '../UI/Submit/Submit'
 
 
 
@@ -12,17 +12,16 @@ const Newsletter = () => {
     return (
         <Formik
             initialValues={newsletterInitialValues}
-            validationSchema={newsletterValidationSchema}
-        
+            validationSchema={newsletterValidationSchema}        
         >
-            <Formulario>
-                    <label for="name" style={{ fontWeight: "600", marginTop: '15px' }}>NOMBRE: </label>
-                    <Input type="text" name="name" placeholder="Ingrese su nombre" required />
+            <Form>
+                    <label for="nombre" style={{ fontWeight: "600", marginTop: '15px' }}>NOMBRE: </label>
+                    <Input type="text" name="nombre" placeholder="Ingrese su nombre" required />
 
 
 
-                    <label for="lastName" style={{ fontWeight: "600" }}>APELLIDO: </label>
-                    <Input type="text" name="lastName" placeholder="Ingrese su apellido" required />
+                    <label for="apellido" style={{ fontWeight: "600" }}>APELLIDO: </label>
+                    <Input type="text" name="apellido" placeholder="Ingrese su apellido" required />
                   
 
 
@@ -65,10 +64,10 @@ const Newsletter = () => {
 
 
 
-                <Button type="submit" name="Envíar">Enviar</Button>
+                <Submit type="submit" name="Envíar">Enviar</Submit>
 
 
-            </Formulario>
+            </Form>
 
         </Formik>
 

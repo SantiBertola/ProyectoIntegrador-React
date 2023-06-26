@@ -35,7 +35,7 @@ export const TitleStyled = styled.h2`
 
 export const IdStyled = styled.p`
   font-size: 1rem;
-  color: #666;
+  color: #e45fce;
 `;
 
 export const PriceStyled = styled.p`

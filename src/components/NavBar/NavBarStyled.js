@@ -110,6 +110,7 @@ export const ModalOverlayStyled = styled(motion.div)`
   z-index: 50;
   width: calc(100vw - 450px);
   height: 100vh;
+  cursor: pointer;
 
   ${({ isHidden }) =>
     !isHidden &&

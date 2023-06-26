@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
 export const ProductosContainerStyled = styled.div`
+  margin: 100px auto;
   width: 40%;
 
   @media (max-width: 992px) {
+    margin-top: 150px;
     width: 80%;
   }
 `;

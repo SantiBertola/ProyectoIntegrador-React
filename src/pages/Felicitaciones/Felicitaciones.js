@@ -20,7 +20,7 @@ const Felicitaciones = () => {
           <p>Te enviaremos a tu mail cuando este en camino</p>
           <img src={GIF} alt='GIF' />
         </ContainerInfoStyled>
-        <Button onClick={() => navigate('/mis-ordenes')}>Volver</Button>
+        <Button onClick={() => navigate('/misordenes')}>Volver</Button>
       </TextStyled>
     </CongratulationsStyled>
   );

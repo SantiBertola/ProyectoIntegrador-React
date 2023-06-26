@@ -5,6 +5,7 @@ export const InputBoxStyled = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0.5rem;
 `;
 
 export const InputLabelStyled = styled.label`
@@ -12,6 +13,8 @@ export const InputLabelStyled = styled.label`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 1.4rem;
+  padding: 0.5rem;
 `;
 
 export const InputStyled = styled.input`

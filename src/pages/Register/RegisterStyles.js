@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { Form as FormikForm } from 'formik';
 
 
 export const LoginContainerStyled = styled.div`
@@ -18,7 +19,7 @@ export const LoginContainerStyled = styled.div`
   }
 `;
 
-export const Form = styled.form`
+export const Form = styled(FormikForm)`
   display: flex;
   flex-direction: column;
   align-items: center;

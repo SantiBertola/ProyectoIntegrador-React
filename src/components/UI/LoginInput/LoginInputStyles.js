@@ -6,25 +6,25 @@ export const InputContainerStyled = styled.div`
 `;
 
 export const LoginInputStyled = styled.input`
-  width: 300px;
-  color: #cc564f;
-  background-color: #2b3438;
-  border-radius: 5px;
+  background-color: #e4584f;
+  border: ${({ isError }) => (isError ? '1px solid #ff3816; ' : '2px solid black')};
+  border-radius: 8px;
+  height: 35px;
   padding: 5px;
-  border: ${({ isError }) => (isError ? '1px solid red ' : '1px solid #cc564f;')};
-  outline: none;
-  text-align: center;
+  color: black;
+  width: 100%;
 
   ::placeholder {
-    opacity: 80%;
-    color: #cc564f;
+    opacity: 60%;
+    color: black;
+    font-weight: 600;
   }
-  -webkit-text-fill-color:  #cc564f;
+  -webkit-text-fill-color: black;
 
   :-webkit-autofill,
   :-webkit-autofill:hover,
   :-webkit-autofill:focus {
-    -webkit-box-shadow: 0 0 0px 1000px #2b3438 inset;
+    -webkit-box-shadow: 0 0 0px 1000px #e4584f inset;
   }
 
 `;
@@ -32,7 +32,6 @@ export const LoginInputStyled = styled.input`
 export const ErrorMessageStyled = styled.p`
   margin: 0;
   margin-top: 5px;
-  color: darkred;
+  color: #ff3816;
   font-size: 14px;
-  text-align: center;
 `;

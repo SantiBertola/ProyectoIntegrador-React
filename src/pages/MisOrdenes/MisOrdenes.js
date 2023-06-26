@@ -7,7 +7,6 @@ import CardsMisOrdenes from '../../components/MisOrdenes/CardsMisOrdenes';
 import {
   MisOrdenesBtnContainerStyled,
   MisOrdenesContainerStyled,
-  MisOrdenesPatternStyled,
   MisOrdenesTitleStyled,
 } from './MisOrdenesStyled';
 import { useDispatch, useSelector } from 'react-redux';
@@ -21,15 +20,13 @@ const MisOrdenes = () => {
   const { orders, error } = useSelector(state => state.orders);
 
   useEffect(() => {
-    if (!orders) {
+    if (currentUser?.token) {
       getOrders(dispatch, currentUser);
-    }
-    if (!currentUser?.token) {
-      dispatch(fetchOrdersFail());
     } else {
-      error && dispatch(clearError());
+      dispatch(fetchOrdersFail());
     }
-  }, [dispatch, currentUser?.token, orders, error]);
+    error && dispatch(clearError());
+  }, [dispatch, currentUser?.token, error]);
 
   return (
     <>

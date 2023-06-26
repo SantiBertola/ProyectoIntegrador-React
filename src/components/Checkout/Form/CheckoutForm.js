@@ -11,6 +11,8 @@ import Input from '../../UI/Input/Input';
 import { checkoutInitialValues } from '../../../formik/initialValues';
 import { checkoutValidationSchema } from '../../../formik/validationSchema';
 import { createOrder } from '../../../axios/axios.orders';
+import Loader from '../../UI/Loader/Loader';
+
 
 const CheckoutForm = ({ cartItems, shippingCost, price }) => {
   const dispatch = useDispatch();
@@ -46,7 +48,7 @@ const CheckoutForm = ({ cartItems, shippingCost, price }) => {
           <Form>
             <Input
               htmlFor='nombre'
-              name='name'
+              name='nombre'
               type='text'
               id='nombre'
               placeholder='Tu nombre'
@@ -82,7 +84,7 @@ const CheckoutForm = ({ cartItems, shippingCost, price }) => {
             </Input>
             <ButtonContainer>
               <Button disabled={!cartItems.length}>
-                Realizar compra
+              {isSubmitting ? <Loader /> : 'Realizar compra'}
               </Button>
             </ButtonContainer>
 

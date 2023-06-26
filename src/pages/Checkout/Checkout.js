@@ -13,20 +13,18 @@ const Checkout = () => {
   );
 
   return (
-    <div>
-      <CheckoutContainer>
-        <CheckoutForm
-          cartItems={cartItems}
-          shippingCost={shippingCost}
-          price={totalPrice}
-        />
-        <ProductsCheckout
-          cartItems={cartItems}
-          shippingCost={shippingCost}
-          price={totalPrice}
-        />
-      </CheckoutContainer>
-    </div>
+    <CheckoutContainer>
+      <ProductsCheckout
+        cartItems={cartItems}
+        shippingCost={shippingCost}
+        price={totalPrice}
+      />
+      <CheckoutForm
+        cartItems={cartItems}
+        shippingCost={shippingCost}
+        price={totalPrice}
+      />
+    </CheckoutContainer>
   );
 };
 

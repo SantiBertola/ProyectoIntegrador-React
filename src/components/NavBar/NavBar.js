@@ -32,12 +32,12 @@ const NavBar = () => {
 
             <NavbarLinks className={`links ${clicked ? 'active' : ''}`}>
                 <Link to="/" onClick={handleClick} >Inicio</Link>
-                <Link to="https://www.nba.com/schedule" target='_blank' >NBA</Link>
+                <Link to="https://www.nba.com/schedule" target='_blank' onClick={handleClick}>NBA</Link>
                 <Link to="/productos" onClick={handleClick} >Productos</Link>
-                <CartStyled>
+                <CartStyled onClick={handleClick}>
                     <CartIcon />
                 </CartStyled>
-                <UserNavStyled>
+                <UserNavStyled onClick={handleClick}>
                     <UserContainerStyled onClick={() =>
                         currentUser ? dispatch(toggleHiddenMenu()) : navigate('/register')
                     }>

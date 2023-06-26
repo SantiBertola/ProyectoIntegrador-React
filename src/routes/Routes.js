@@ -9,7 +9,7 @@ import Checkout from '../pages/Checkout/Checkout'
 import ProtectedRoute from '../components/ProtectedRoute/ProtectedRoute';
 import MisOrdenes from '../pages/MisOrdenes/MisOrdenes'
 import Felicitaciones from '../pages/Felicitaciones/Felicitaciones';
-
+import Resumen from '../pages/Resumen/Resumen'
 
 const Routes = () => {
   return (
@@ -20,6 +20,8 @@ const Routes = () => {
       <Route path='/productos' element={<CardsProducts />} />
       <Route path='/misordenes' element={<MisOrdenes />} />
       <Route path='/felicitaciones' element={<Felicitaciones />} />
+      <Route path='/resumen/:orderId' element={<Resumen />} />
+
 
 
       <Route path='/checkout' element={

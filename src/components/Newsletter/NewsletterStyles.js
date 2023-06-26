@@ -1,15 +1,15 @@
 import styled from "styled-components";
+import { Form as FormikForm } from 'formik';
 
-export const Formulario = styled.form`
+export const Form = styled(FormikForm)`
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 15px;
+    gap: 5px;
     background-color: #2b3438ad;
     width: 40%;
     height: 40%;
-    padding-bottom: 5px;
 
     @media (max-width: 992px) {
         width: 100%;

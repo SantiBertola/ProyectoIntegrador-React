@@ -47,7 +47,7 @@ const Hero = ({ doScroll }) => {
             type='text'
             placeholder='Ejemplo: Ropa de hombres'
           />
-          <Button onClick={e => handleSubmit(e, value)}>Buscar</Button>
+          <Button onClick={e => handleSubmit(e, value) }>Buscar</Button>
         </HeroLinks>
 
       </HeroInfo>
