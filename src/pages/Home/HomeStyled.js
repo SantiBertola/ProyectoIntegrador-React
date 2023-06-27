@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const HomeWrapper = styled.div`
   width: 100vw;
   max-width: 1600px;
-  padding: 2rem;
+  padding: 1rem;
   margin: 0 auto;
   h2 {
     font-weight: 400;

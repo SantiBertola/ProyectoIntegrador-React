@@ -14,7 +14,7 @@ const CartIcon = () => {
 
   return (
     <div onClick={() => dispatch(toggleHiddenCart())}>
-      <FaShoppingCart style={{ color: '#e4584f', fontSize: '1.3rem', cursor: 'pointer'}}/>  
+      <FaShoppingCart style={{ color: '#e4584f', fontSize: '1.2rem', cursor: 'pointer'}}/>  
       <span>{totalCartItemQuantity}</span>
     </div>
   )
